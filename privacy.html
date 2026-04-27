@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - 飞书文档转存助手</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 14px;
+            color: #1f2329;
+            background: #f5f6f7;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .title {
+            font-size: 22px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #1f2329;
+        }
+        .update-date {
+            text-align: center;
+            color: #8f959e;
+            font-size: 13px;
+            margin-bottom: 32px;
+        }
+        .section {
+            margin-bottom: 28px;
+        }
+        .section h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #3370ff;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .section p {
+            margin-bottom: 8px;
+            color: #3c3c3c;
+        }
+        .section ul {
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+        .section li {
+            margin-bottom: 4px;
+            color: #3c3c3c;
+        }
+        .highlight {
+            background: #f5f6f7;
+            border-left: 3px solid #3370ff;
+            padding: 10px 14px;
+            margin: 10px 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 13px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e8e8;
+            color: #8f959e;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="title">隐私政策</h1>
+    <p class="update-date">最后更新日期：2026年4月27日</p>
+
+    <div class="section">
+        <h2>1. 引言</h2>
+        <p>「飞书文档转存助手」（以下简称"本扩展"）是一款 Chrome 浏览器扩展，旨在帮助用户一键将飞书文档复制到个人云空间。我们深知个人隐私的重要性，本隐私政策旨在向您说明本扩展如何收集、使用、存储和保护您的信息。</p>
+        <p>使用本扩展即表示您同意本隐私政策的内容。如果您不同意本隐私政策的任何内容，请停止使用本扩展。</p>
+    </div>
+
+    <div class="section">
+        <h2>2. 信息收集</h2>
+        <p>本扩展仅收集实现核心功能所必需的最少信息：</p>
+        <ul>
+            <li><strong>应用凭证</strong>：您主动输入的飞书开放平台 App ID 和 App Secret，用于调用飞书 API 接口。</li>
+            <li><strong>授权令牌</strong>：通过飞书 OAuth 2.0 授权获取的 Access Token 和 Refresh Token，用于代替您的身份访问飞书 API。</li>
+            <li><strong>当前页面地址</strong>：读取您当前浏览器标签页的 URL，用于识别飞书文档并提取文档标识信息。</li>
+        </ul>
+        <div class="highlight">
+            本扩展<strong>不会</strong>收集您的浏览历史、键盘输入、鼠标行为、剪贴板内容或其他与核心功能无关的个人信息。
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. 信息使用</h2>
+        <p>您提供的信息仅用于以下用途：</p>
+        <ul>
+            <li>通过飞书 OAuth 2.0 协议完成账号授权和身份验证。</li>
+            <li>读取当前飞书文档的基本信息（文档名称、文档类型）。</li>
+            <li>获取您飞书云空间的文件夹列表，供您选择目标保存位置。</li>
+            <li>将文档复制到您选择的目标文件夹中。</li>
+            <li>记录您最近使用的文件夹，方便下次快速选择。</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. 信息存储</h2>
+        <p>所有数据均存储在您本地浏览器的 Chrome Storage 中：</p>
+        <ul>
+            <li><strong>chrome.storage.local</strong>：存储应用凭证（App ID、App Secret）、授权令牌（Access Token、Refresh Token）、令牌过期时间。</li>
+            <li><strong>chrome.storage.sync</strong>：存储最近使用的文件夹列表（最多 5 条记录）。</li>
+        </ul>
+        <div class="highlight">
+            本扩展<strong>不会</strong>将您的任何数据上传至第三方服务器。所有数据仅保存在您的本地浏览器中。
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. 第三方服务</h2>
+        <p>本扩展仅与以下第三方服务进行通信：</p>
+        <ul>
+            <li><strong>飞书开放平台</strong>（open.feishu.cn）：用于 OAuth 授权、令牌刷新、获取文件元数据、文件夹列表查询和文件复制操作。所有通信均通过 HTTPS 加密传输。</li>
+        </ul>
+        <p>本扩展不会向飞书以外的任何服务器发送数据。</p>
+    </div>
+
+    <div class="section">
+        <h2>6. 数据安全</h2>
+        <p>我们采取以下措施保护您的数据安全：</p>
+        <ul>
+            <li>所有与飞书服务器的通信均使用 HTTPS 加密传输。</li>
+            <li>授权令牌仅保存在浏览器本地存储中，不会通过网络传输到任何第三方。</li>
+            <li>App Secret 在输入时以密码形式隐藏显示。</li>
+            <li>您可随时通过"退出登录"功能清除所有授权信息。</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. 权限说明</h2>
+        <p>本扩展请求以下浏览器权限及其用途：</p>
+        <ul>
+            <li><strong>identity</strong>：用于发起飞书 OAuth 授权流程。</li>
+            <li><strong>storage</strong>：用于在本地存储应用配置和授权信息。</li>
+            <li><strong>activeTab / tabs</strong>：用于读取当前标签页 URL，识别飞书文档。</li>
+        </ul>
+        <p>本扩展仅在您主动使用时才会激活相关权限，不会在后台持续监控您的浏览行为。</p>
+    </div>
+
+    <div class="section">
+        <h2>8. 您的权利</h2>
+        <p>您对个人数据享有以下控制权：</p>
+        <ul>
+            <li><strong>查看和修改配置</strong>：您可以随时通过扩展内的"设置"功能查看和修改 App ID 和 App Secret。</li>
+            <li><strong>撤销授权</strong>：您可以通过扩展内的"退出登录"功能清除所有授权令牌。</li>
+            <li><strong>清除数据</strong>：您可以在 Chrome 扩展管理页面中清除扩展的存储数据，或直接卸载扩展以彻底删除所有本地数据。</li>
+            <li><strong>在飞书端撤销</strong>：您可以在飞书开放平台的应用授权管理中撤销本扩展的访问权限。</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>9. 儿童隐私</h2>
+        <p>本扩展不面向 14 周岁以下的儿童。我们不会故意收集儿童的个人信息。如果您发现儿童在未经监护人同意的情况下使用了本扩展，请与我们联系。</p>
+    </div>
+
+    <div class="section">
+        <h2>10. 政策更新</h2>
+        <p>我们可能会不定期更新本隐私政策。更新后的政策将在本页面发布，并通过修改页面顶部的"最后更新日期"来通知您。继续使用本扩展即视为您同意更新后的隐私政策。</p>
+    </div>
+
+    <div class="section">
+        <h2>11. 联系方式</h2>
+        <p>如果您对本隐私政策有任何疑问或建议，请发送邮件联系我们：flytzuhan@gmail.com</p>
+    </div>
+
+    <div class="footer">
+        飞书文档转存助手 &copy; 2026 &nbsp;|&nbsp; 本扩展为开源软件
+    </div>
+</div>
+</body>
+</html>
